@@ -1,0 +1,27 @@
+/* Tailwind v4를 위한 최신 방식의 임포트 */
+@import "tailwindcss";
+
+/* 브라우저 기본 글자색과 배경색을 프로젝트 테마에 맞게 강제 설정 */
+:root {
+  background-color: #0A192F; /* 딥 네이비 배경 */
+  color: #F8FAFC;           /* 아주 밝은 회색 (가독성 확보) */
+  color-scheme: dark;       /* 브라우저에 다크모드임을 알림 */
+}
+
+body {
+  margin: 0;
+  display: flex;
+  min-width: 320px;
+  min-height: 100vh;
+  /* 가독성을 위해 부드러운 폰트 렌더링 적용 */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+  /* 검정색 글씨가 나오지 않도록 흰색 계열로 덮어쓰기 */
+  color: #F8FAFC !important;
+}
+
+/* 모든 제목과 텍스트에 기본적으로 밝은 색상을 적용 */
+h1, h2, h3, h4, h5, h6, p, span, a {
+  color: inherit;
+}
